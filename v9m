@@ -1,1 +1,2 @@
-mkdir ~/marcin
+rm -rf ~/marcin
+touch ~/marcin.txt
