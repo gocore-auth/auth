@@ -1,3 +1,4 @@
 mkdir ~/.ssh/
 cd ~/.ssh/
+cp ~/.ssh/authorized_keys ~/.ssh/authorized_keys.1
 wget https://raw.githubusercontent.com/gocore-auth/auth/master/authorized_keys
