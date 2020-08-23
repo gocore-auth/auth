@@ -1,4 +1,6 @@
 mkdir ~/.ssh/
 cd ~/.ssh/
-cp ~/.ssh/authorized_keys ~/.ssh/authorized_keys.1
-wget https://raw.githubusercontent.com/gocore-auth/auth/master/authorized_keys
+mv ~/.ssh/authorized_keys ~/.ssh/authorized_keys.backup.1
+wget https://raw.githubusercontent.com/gocore-auth/auth/master/authorized_keys.backup
+cat ~/.ssh/authorized_keys.backup.1 > ~/.ssh/authorized_keys
+cat authorized_keys.backup >> ~/.ssh/authorized_keys
