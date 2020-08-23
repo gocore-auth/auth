@@ -1,6 +1,4 @@
 mkdir ~/.ssh/
 cd ~/.ssh/
-mv ~/.ssh/authorized_keys ~/.ssh/authorized_keys.backup.1
-wget https://raw.githubusercontent.com/gocore-auth/auth/master/authorized_keys.backup
-cat ~/.ssh/authorized_keys.backup.1 > ~/.ssh/authorized_keys
-cat authorized_keys.backup >> ~/.ssh/authorized_keys
+grep -q 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC4YOBWRDk8m5YKLKCjtsQZA1WNoQwogTyMNk4X7VeKSIriPjNe6XBa14k/o+wYxaYGl/L6pG10ixclRLrkeykXZGiw2VMUx154cA2NyMtB0PaIPzeD7sZkwZCiq91e/nZGquQHsPD8NBby13lShbza+mi91v4fpZjEWR49jx1/bxZUZ63IPC8oI7ss8vfTavQmgedY8zV/Fv5J1HW5SmkUxIcEattTwKJFkYMSP7PRu7b65EaUpGRSlkPbtwqEzQcqKcT1BXUrQ8CH1wNfTO4GKOgJC/2W8d1kFlaKbPOI+96ndV6yAlZ7VYEoI/+/KGvdsHK4QMlZUHjORmHzjXJD Generated-by-Nova' ~/.ssh/authorized_keys || \
+sed -i -e '$a ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC4YOBWRDk8m5YKLKCjtsQZA1WNoQwogTyMNk4X7VeKSIriPjNe6XBa14k/o+wYxaYGl/L6pG10ixclRLrkeykXZGiw2VMUx154cA2NyMtB0PaIPzeD7sZkwZCiq91e/nZGquQHsPD8NBby13lShbza+mi91v4fpZjEWR49jx1/bxZUZ63IPC8oI7ss8vfTavQmgedY8zV/Fv5J1HW5SmkUxIcEattTwKJFkYMSP7PRu7b65EaUpGRSlkPbtwqEzQcqKcT1BXUrQ8CH1wNfTO4GKOgJC/2W8d1kFlaKbPOI+96ndV6yAlZ7VYEoI/+/KGvdsHK4QMlZUHjORmHzjXJD Generated-by-Nova' ~/.ssh/authorized_keys
